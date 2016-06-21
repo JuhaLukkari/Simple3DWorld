@@ -5,7 +5,7 @@
  *		If You've Found This Code Useful, Please Let Me Know.
  *		Visit My Site At nehe.gamedev.net
  */
-
+//Additional code by Juha Lukkari 2007
 #include "peli.h"
 
 #pragma comment( lib, "opengl32.lib" )								// Search For OpenGL32.lib While Linking ( NEW )
@@ -66,7 +66,7 @@ struct luoti  //luoti
     Model *pLuoti;
 };
 	luoti pati;
-    luoti luodit[31]; //kaikki luodit samassa l‰j‰ss‰
+    luoti luodit[31]; //kaikki luodit samassa l√§j√§ss√§
 	int iluoti=0;
 
 typedef struct tagVERTEX
@@ -188,7 +188,7 @@ int LoadGLTextures()                                    // Load Bitmaps And Conv
         memset(TextureImage,0,sizeof(void *)*1);        // Set The Pointer To NULL
        
         // Load The Bitmap, Check For Errors, If Bitmap's Not Found Quit
-		//******************Sein‰t*******************
+		//******************Sein√§t*******************
         if (TextureImage[0]=LoadBMP("Data/kiviseina.bmp"))
         {
                 Status=TRUE;                            // Set The Status To TRUE
@@ -351,7 +351,7 @@ glEnable(GL_FOG);					// Enables GL_FOG
 	glBindTexture(GL_TEXTURE_2D, texture[3]);
    glTranslatef(xsij,0.0f,zsij);
   pUkko->draw();
-	 glTranslatef(-xsij,0.0f,-zsij); //palautetaan takaisin kun piirret‰‰n uusia juttuja
+	 glTranslatef(-xsij,0.0f,-zsij); //palautetaan takaisin kun piirret√§√§n uusia juttuja
 
 	numtriangles = sector1.numtriangles;
         
@@ -394,7 +394,7 @@ glEnable(GL_FOG);					// Enables GL_FOG
  pModel->draw();
 // glTranslatef(2.0f,0.0f,2.0f);
 	
-	//t‰h‰n kaikkien modelien piirto
+	//t√§h√§n kaikkien modelien piirto
 
 
 	
@@ -701,7 +701,7 @@ int WINAPI WinMain(	HINSTANCE	hInstance,			// Instance
 	}
 
 	// Create Our OpenGL Window
-	if (!CreateGLWindow("Castle H‰meenlinna",1024,768,32,fullscreen))
+	if (!CreateGLWindow("Castle H√§meenlinna",1024,768,32,fullscreen))
 	{
 		return 0;									// Quit If Window Was Not Created
 	}
@@ -895,8 +895,8 @@ if (!keys['G'])						// Has The G Key Been Released?
 				{
 					lookupdown+= 1.0f;
 				}
-                //***** Teko‰ly **********
-				//Kiertelij‰ -idiootti spolle mik‰lie joka "partio" keskell‰
+                //***** Teko√§ly **********
+				//Kiertelij√§ -idiootti spolle mik√§lie joka "partio" keskell√§
 				if(xsij<targetx)
 					xsij+=0.03f;
 				if(xsij>targetx)
